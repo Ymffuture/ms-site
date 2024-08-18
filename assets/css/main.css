@@ -1379,3 +1379,34 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+
+
+.gallery-item {
+  position: relative;
+  overflow: hidden; /* Hide overflowing content */
+  height: 100%; /* Ensure item takes full height */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure image covers the area without distortion */
+}
+
+.gallery-links {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.gallery-item:hover .gallery-links {
+  opacity: 1;
+}
