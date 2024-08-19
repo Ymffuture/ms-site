@@ -52,3 +52,5 @@ window.addEventListener('popstate', function() {
     const url = window.location.pathname;
     // Load content based on the URL, if needed
 });
+
+document.addEventListener('contextmenu', event => event.preventDefault());
