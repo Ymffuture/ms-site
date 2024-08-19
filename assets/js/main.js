@@ -136,7 +136,7 @@ const galleryItems = [
   { src: "assets/img/gallery/gallery-2.jpg", title: "Gallery 2" },
   { src: "assets/img/gallery/gallery-3.jpg", title: "Gallery 3" },
   { src: "assets/img/gallery/gallery-4.jpg", title: "Gallery 4" },
-  { src: "assets/img/gallery/gallery-5.jpg", title: "Gallery 5" },
+  { src: "assets/img/gallery/gallery-27.jpg", title: "Gallery 5" },
   { src: "assets/img/gallery/gallery-21.jpg", title: "Gallery 6" },
   { src: "assets/img/gallery/gallery-7.jpg", title: "Gallery 7" },
   { src: "assets/img/gallery/gallery-8.jpg", title: "Gallery 8" }
