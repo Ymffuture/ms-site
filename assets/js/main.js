@@ -188,7 +188,7 @@ form.addEventListener('submit', function(e) {
         .then(async (response) => {
             let json = await response.json();
             if (response.status == 200) {
-                result.innerHTML = "Form submitted successfully";
+                result.innerHTML = "Your message has been sent. Thank you!";
             } else {
                 console.log(response);
                 result.innerHTML = json.message;
@@ -205,6 +205,11 @@ form.addEventListener('submit', function(e) {
             }, 3000);
         });
 });
-
 // form end here
+
+document.querySelectorAll('a').forEach(anchor => {
+  if (anchor.textContent.includes('Available for Hire')) {
+    anchor.classList.add('apple');
+  }
+});
 

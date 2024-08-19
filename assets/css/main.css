@@ -2,28 +2,32 @@
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Cardo",  sans-serif;
-  --nav-font: "Inter",  sans-serif;
+
+  --heading-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  
+  --nav-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #b7903dd2; /* Background color for the entire website, including individual sections */
-  --default-color: #EEEEEE; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #EEEEEE; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #131842; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #1a1a1a; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #EEEEEE; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #FFFFFF; /* Background color for the entire website, including individual sections */
+  --default-color: #0B0B0B; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #191919; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #3ABEF9; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #bcbcbc; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #333; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.5);  /* The default color of the main navmenu links */
-  --nav-hover-color: #EEEEEE; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: rgba(0, 0, 0, 0.57);  /* The default color of the main navmenu links */
+  --nav-hover-color: #9fa0a0; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #1a1a1a; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #1a1a1a; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-background-color: #191919; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: rgba(255, 255, 255, 0.5); /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #EEEEEE; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #6e4000; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --header-bg-color: #191919;
+  --header-color:white; /* Used as the background color for the header section */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -34,9 +38,9 @@
 }
 
 .dark-background {
-  --background-color: #060606b9;
+  --background-color: #333;
   --default-color: #EEEEEE;
-  --heading-color: #EEEEEE;
+  --heading-color: #fcfcfc;
   --surface-color: #252525;
   --contrast-color: #EEEEEE;
 }
@@ -50,9 +54,13 @@
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
-  color: var(--default-color);
+  /* color: var(--default-color); */
   background-color: var(--background-color);
   font-family: var(--default-font);
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555 !important; 
 }
 
 a {
@@ -74,8 +82,15 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
+  font-weight: 500 !important;
+  
 }
+ul a{
+  color: #EEEEEE !important;
+  text-transform: capitalize !important;
+  gap: 5px;
 
+}
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
@@ -88,7 +103,7 @@ h6 {
   font-weight: 600;
 }
 
-.php-email-form .sent-message {
+.php-email-form .result {
   display: none;
   color: #ffffff;
   background: #059652;
@@ -127,13 +142,22 @@ h6 {
     transform: rotate(360deg);
   }
 }
-
+.apple{
+  color: #EEEEEE !important;
+  background-color: #1588C9 !important;
+  border-radius: 16px !important;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600 !important;
+}
 /*--------------------------------------------------------------
 # Global Header
+
 --------------------------------------------------------------*/
 .header {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: #EEEEEE !important;
+  background-color: var(--header-bg-color);
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
@@ -142,6 +166,7 @@ h6 {
 
 .header .logo {
   line-height: 1;
+  
 }
 
 .header .logo img {
@@ -153,7 +178,7 @@ h6 {
   font-size: 32px;
   margin: 0;
   font-weight: 400;
-  color: var(--heading-color);
+  color: #EEEEEE !important;
 }
 
 .header .logo i {
@@ -166,11 +191,12 @@ h6 {
 }
 
 .header .header-social-links a {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--header-color), transparent 40%);
   padding-left: 6px;
   display: inline-block;
   transition: 0.3s;
-  font-size: 16px;
+  font-size: 20px;
+  gap: 8px !important;
 }
 
 .header .header-social-links a:hover {
@@ -257,7 +283,7 @@ h6 {
   }
 
   .navmenu li:last-child a {
-    padding-right: 0;
+    padding-right: .2rem;
   }
 
   .navmenu li:hover>a,
@@ -452,10 +478,10 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  --background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  --background-color: color-mix(in srgb, var(--background-color), transparent 95%);
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: var(--background-color);
+  background-color: var(--header-bg-color);
   font-size: 14px;
   padding: 40px 0;
   position: relative;
@@ -463,10 +489,13 @@ h6 {
 
 .footer .copyright p {
   margin-bottom: 0;
+  color: #EEEEEE !important;
+
 }
 
 .footer .social-links {
   margin-top: 20px;
+  color: #EEEEEE;
 }
 
 .footer .social-links a {
@@ -478,7 +507,7 @@ h6 {
   border-radius: 50%;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: color-mix(in srgb, var(--background-color), transparent 50%);
   margin: 0 5px;
   transition: 0.3s;
 }
@@ -492,6 +521,7 @@ h6 {
   margin-top: 10px;
   font-size: 13px;
   text-align: center;
+  color: #059652;
 }
 
 /*--------------------------------------------------------------
@@ -791,12 +821,13 @@ section,
 .hero h2 .underlight:before {
   content: "";
   position: absolute;
-  height: 50%;
+  height: 10%;
   bottom: 0;
   left: 0;
   right: 0;
   background: var(--accent-color);
   z-index: -1;
+  border-radius: 50%;
 }
 
 .hero p {
@@ -835,6 +866,8 @@ section,
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  background: #EAF4FF;
+
 }
 
 .gallery .gallery-item img {
@@ -1200,6 +1233,7 @@ section,
   height: 100%;
   position: relative;
   z-index: 1;
+  border-radius: 8px;
 }
 
 .services .service-item:before {
@@ -1209,6 +1243,7 @@ section,
   inset: 100% 0 0 0;
   transition: all 0.3s;
   z-index: -1;
+  border-radius: 8px;
 }
 
 .services .service-item .icon {
@@ -1255,12 +1290,13 @@ section,
 .services .service-item:hover i {
   color: var(--accent-color);
   background-color: var(--default-color);
+  border-radius: 8px;
 }
 
 .services .service-item:hover:before {
   background: var(--accent-color);
   inset: 0;
-  border-radius: 0px;
+  border-radius: 8px;
 }
 
 /*--------------------------------------------------------------
@@ -1381,32 +1417,236 @@ section,
 }
 
 
-
-.gallery-item {
+.apple-hero {
   position: relative;
-  overflow: hidden; /* Hide overflowing content */
-  height: 100%; /* Ensure item takes full height */
+  padding: 100px 0;
+  background-image: url('../img/360_F_572457480_Gh1QFNcddrLkybzJcf1hKD9TWb7TqqYO.jpg'); /* Replace with your image path */
+  /* background-size: cover;  */
+  background-position: center center;
+  background-repeat: no-repeat;
+  /* color: #fff;  */
 }
 
-.gallery-item img {
-  width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure image covers the area without distortion */
-}
-
-.gallery-links {
+.apple-hero::before {
+  content: '';
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  opacity: 0;
-  transition: opacity 0.3s;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.702); /* Semi-transparent dark overlay */
+  backdrop-filter: blur(4px); /* Optional: adds blur to the background image */
+  z-index: 1;
 }
 
-.gallery-item:hover .gallery-links {
-  opacity: 1;
+.apple-hero .container {
+  position: relative;
+  z-index: 2; /* Ensure the content is above the overlay */
+}
+
+.apple-hero h2 {
+  font-size: 2.5em;
+
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.935); /* Add shadow to text for better readability */
+}
+
+.apple-hero p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Add shadow to text for better readability */
+  color: #b3b3b3;
+}
+
+.apple-hero .cta-btn.apple {
+  font-family: "San Francisco", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+
+}
+
+.apple-hero .cta-btn.apple:hover {
+  background-color: #005bb5;
+}
+
+.underlight {
+  background: linear-gradient(to right, #0054a8, #928300);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* about */
+
+
+.apple-about {
+  background-color: #f8f8f8; /* Light gray background */
+  color: #333; /* Dark gray text */
+  padding: 80px 0;
+}
+
+.apple-about h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000; /* Black text for headings */
+}
+
+.apple-about p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 50px !important;
+  color: #555; 
+}
+
+.apple-about .cta-btn {
+  padding: 12px 30px;
+  background-color: #007aff; /* Apple-style blue */
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+ 
+}
+
+.apple-about .cta-btn:hover {
+  background-color: #005bb5; /* Darker blue on hover */
+  color: #fff;
+  text-decoration: none;
+}
+
+.breadcrumbs {
+  margin-top: 30px;
+  padding: 15px 0;
+  background-color: #e0e0e0; /* Light gray for breadcrumbs */
+  font-size: 0.9em;
+}
+
+.breadcrumbs ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.breadcrumbs li {
+  margin: 0 10px;
+}
+
+.breadcrumbs a {
+  color: #007aff;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs .current {
+  color: #555;
+}
+
+
+/* contact=====  */
+
+.apple-contact {
+  background-color: #f8f8f8; /* Light gray background, characteristic of Apple’s minimalistic style */
+  padding: 80px 0;
+  color: #333; /* Subtle text color */
+}
+
+.apple-contact .info-item h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #007aff; /* Apple blue for headings */
+}
+
+.apple-contact .info-item p {
+  margin: 0;
+  font-size: 1em;
+  color: #555; /* Slightly lighter text for info items */
+}
+
+.apple-contact .php-email-form {
+  background-color: #fff; /* White background for the form */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.apple-contact .php-email-form .form-control {
+  border-radius: 5px;
+  border: 1px solid #ddd; /* Light gray border */
+  padding: 12px 15px;
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 20px;
+  background-color: #f8f8f8; /* Matching the form's background color */
+  transition: border-color 0.3s ease-in-out;
+}
+
+.apple-contact .php-email-form .form-control:focus {
+  border-color: #007aff; /* Blue border on focus */
+  outline: none;
+}
+
+.apple-contact .cta-btn.apple {
+  padding: 12px 30px;
+  background-color: #007aff; /* Apple-style blue */
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  border: none;
+}
+
+.apple-contact .cta-btn.apple:hover {
+  background-color: #005bb5; /* Darker blue on hover */
+  color: #fff;
+  text-decoration: none;
+}
+
+.apple-contact .loading, .apple-contact .error-message, .apple-contact .result  {
+  display: none;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.apple-contact .loading {
+  color: #007aff;
+}
+
+.apple-contact .error-message {
+  color: red;
+}
+
+.apple-contact .result {
+  color: green;
+}
+#img{
+  width: 50px;
+
+}
+.ft{
+  display: flex;
+  text-align: center;
+  gap: 20px;
+}
+
+#line{
+  height: 500px !important;
+  font-weight: 800 !important;
+  width: 500px;
+  color: #fff;
+
+  margin-top: 10%;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 30px;
 }
