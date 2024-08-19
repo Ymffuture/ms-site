@@ -540,7 +540,7 @@ ul a{
 #preloader:before,
 #preloader:after {
   content: "";
-  background-color: #000000;
+  background-color: #191919;
   position: absolute;
   inset: 0;
   width: 50%;
