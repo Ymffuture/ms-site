@@ -485,6 +485,7 @@ ul a{
   font-size: 14px;
   padding: 40px 0;
   position: relative;
+  
 }
 
 .footer .copyright p {
@@ -1450,6 +1451,7 @@ section,
   font-weight: 700;
   margin-bottom: 20px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.935); /* Add shadow to text for better readability */
+  color: black;
 }
 
 .apple-hero p {
