@@ -133,3 +133,18 @@ galleryItems.forEach(item => {
 });
 
 console.log(galleryItems);
+// script.js
+
+function showToast() {
+  const toast = document.getElementById('toast');
+  toast.className = 'toast show';
+
+  // Hide the toast after 3 seconds (3000 milliseconds)
+  setTimeout(function() {
+      toast.className = 'toast';
+  }, 5000);
+}
+
+
+//=============================================
+

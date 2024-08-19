@@ -40,6 +40,7 @@
  
    <!-- Main CSS File -->
    <link href="assets/css/main.css" rel="stylesheet">
+   <link href="assets/css/styles.css" rel="stylesheet">
  
  </head>
 
@@ -50,7 +51,7 @@
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <img src="assets/img/logo.png" alt=""> 
-        <h1 class="sitename">Mfundo_Snaps</h1>
+        <h1 class="sitename" id="theme-toggle">Mfundo_Snaps</h1>
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -96,13 +97,14 @@
           <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="100">
             <h2><span>I'm </span><span class="underlight">Terrence Mfundo</span>, a Professional<span> Photographer.</span></h2>
             <p>I specialize in capturing life’s unique moments with creativity and precision. From weddings to portraits and commercial projects, I deliver personalized, high-quality photography that tells your story in every frame. Let’s create timeless memories together.</p>
-            <a href="contact.html" class="cta-btn apple">Available for Hire<br></a>
+            <a href="contact.html" class="cta-btn apple" onclick="showToast()" title="Contact Us">Available for Hire<br></a>
           </div>
         </div>
       </div>
+ 
     </section>
     
-
+    <div id="toast" class="toast">😴Loading...</div>
     <!-- Gallery Section -->
     <section id="gallery" class="gallery section">
 
@@ -112,27 +114,31 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/gallery/gallery-1.jpg" class="img-fluid" alt="" >
+              <div class="badge">MS</div>
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-1.jpg" title="Gallery 1" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                <a href="assets/img/gallery/gallery-15.jpg" title="Gallery 1" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
           </div><!-- End Gallery Item -->
 
           <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-2.jpg" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-2.jpg" title="Gallery 2" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
+            <div class="gallery-item h-100 position-relative">
+                <img src="assets/img/gallery/gallery-11.jpg" class="img-fluid" alt="" id="galleryImage">
+                <div class="badge2">MS</div>
+                <div class="gallery-links d-flex align-items-center justify-content-center">
+                    <a href="assets/img/gallery/gallery-2.jpg" title="Gallery 2" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                    <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
             </div>
-          </div><!-- End Gallery Item -->
+        </div><!-- End Gallery Item -->
+        
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-3.jpg" class="img-fluid" alt="">
+              <img src="assets/img/gallery/gallery-14.jpg" class="img-fluid" alt="" id="galleryImage">
+              <div class="badge3">MS</div>
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="assets/img/gallery/gallery-3.jpg" title="Gallery 3" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -142,7 +148,8 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100 ">
-              <img src="assets/img/gallery/gallery-4.jpg" class="img-fluid" alt="">
+              <img src="assets/img/gallery/gallery-20.jpg" class="img-fluid" alt="">
+              <div class="badge4">MS</div>
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="assets/img/gallery/gallery-4.jpg" title="Gallery 4" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -153,8 +160,9 @@
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
               <img src="assets/img/gallery/gallery-16.jpg" class="img-fluid" alt="">
+              <div class="badge5">MS</div>
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-16.jpg" title="Gallery 5" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                <a href="assets/img/gallery/gallery-9.jpg" title="Gallery 5" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
@@ -163,6 +171,7 @@
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
               <img src="assets/img/gallery/gallery-22.jpg" class="img-fluid" alt="">
+              <div class="badge6">MS</div>
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="assets/img/gallery/gallery-17.jpg" title="Gallery 6" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -172,7 +181,8 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-19.jpg" class="img-fluid" alt="">
+              <img src="assets/img/gallery/gallery-19.jpg" class="img-fluid" alt="" id="galleryImage">
+              <div class="badge7">MS</div>
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="assets/img/gallery/gallery-7.jpg" title="Gallery 7" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -182,7 +192,8 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-26.jpg" class="img-fluid" alt="">
+              <img src="assets/img/gallery/gallery-25.jpg" class="img-fluid" alt="" id="galleryImage">
+              <div class="badge8">MS</div>
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="assets/img/gallery/gallery-26.jpg" title="Gallery 8" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -212,7 +223,7 @@
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="credits">
-        Website created by <a href="https://learniq.netlify.app">Future_</a>
+        Website created by <a href="https://learniq.netlify.app" title="learniq">Future_</a>
       </div>
     </div>
 
@@ -246,7 +257,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/other.js"></script>
 </body>
 
 </html>

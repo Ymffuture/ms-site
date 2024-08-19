@@ -1,0 +1,68 @@
+/* styles.css */
+
+.toast {
+    visibility: hidden; /* Hidden by default */
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    font-size: 17px;
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.5s, visibility 0.5s, bottom 0.5s;
+}
+
+/* Show the toast */
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px;
+}
+
+
+.gallery-item {
+    position: relative; 
+}
+
+.badge ,.badge2 ,.badge3 ,.badge4 ,.badge5 ,.badge6 ,.badge7 ,.badge8 ,.badge9 ,.badge10 ,.badge11 ,.badge12 ,.badge13 ,.badge14 ,.badge15 ,.badge16 ,.badge17 ,.badge18 {
+    position: absolute;
+    top: 15px; 
+    right: 15px; 
+    background: linear-gradient(135deg, #ff6f61, #d8345f);
+    color: #191919;
+    padding: 8px 15px; 
+    border-radius: 25px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; 
+}
+.badge2 , .badge4 , .badge6 , .badge8 , .badge10 , .badge12 , .badge14 , .badge16 , .badge18 {
+    background: linear-gradient(135deg, #61ff6e, #a1d834); 
+}
+
+.blur {
+    filter: blur(5px); /* Adjust blur amount as needed */
+    transition: filter 0.3s ease; /* Smooth transition for the blur effect */
+}
+
+
+.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dark-theme {
+    background-color: #1a1a1a !important;
+    color: #ffffff;
+}
