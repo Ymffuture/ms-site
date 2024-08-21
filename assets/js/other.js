@@ -31,26 +31,3 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-
-
-// script.js
-window.addEventListener('load', function() {
-    const links = document.querySelectorAll('a');
-
-    links.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            const url = this.getAttribute('href');
-            history.pushState(null, '', url);
-            // Load content dynamically here, if needed
-        });
-    });
-});
-
-window.addEventListener('popstate', function() {
-    // Handle the browser back button
-    const url = window.location.pathname;
-    // Load content based on the URL, if needed
-});
-
-document.addEventListener('contextmenu', event => event.preventDefault());
