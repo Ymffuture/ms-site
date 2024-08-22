@@ -16,6 +16,7 @@
     font-size: 17px;
     opacity: 0; /* Initially invisible */
     transition: opacity 0.5s, visibility 0.5s, bottom 0.5s;
+    font-family: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /* Show the toast */
@@ -30,11 +31,11 @@
     position: relative; 
 }
 
-.badge ,.badge2 ,.badge3 ,.badge4 ,.badge5 ,.badge6 ,.badge7 ,.badge8 ,.badge9 ,.badge10 ,.badge11 ,.badge12 ,.badge13 ,.badge14 ,.badge15 ,.badge16 ,.badge17 ,.badge18 {
+.badge{
+    background: linear-gradient(135deg, #ff6f61, #d8345f);
     position: absolute;
     top: 15px; 
     right: 15px; 
-    background: linear-gradient(135deg, #ff6f61, #d8345f);
     color: #191919;
     padding: 8px 15px; 
     border-radius: 25px; 
@@ -46,9 +47,27 @@
     align-items: center;
     justify-content: center;
     z-index: 10; 
+    font-family: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    cursor: pointer;
 }
-.badge2 , .badge4 , .badge6 , .badge8 , .badge10 , .badge12 , .badge14 , .badge16 , .badge18 {
+.badge2{
     background: linear-gradient(135deg, #61ff6e, #a1d834); 
+   position: absolute;
+    top: 15px; 
+    right: 15px; 
+    color: #191919;
+    padding: 8px 15px; 
+    border-radius: 25px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; 
+    font-family: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    cursor: pointer;
 }
 
 .blur {
@@ -78,3 +97,46 @@
     background-repeat: repeat;
     opacity: 0.3;
 }
+
+.gallery-item {
+    position: relative;
+  }
+
+  .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .badge-info {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    background-color: rgba(245, 244, 244, 0.8);
+    color: rgb(27, 27, 27);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+    width: 100%;
+  }
+
+
+  .badge:hover .badge-info {
+    display: block;
+  }
+
+  .gallery-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
