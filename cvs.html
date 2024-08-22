@@ -90,14 +90,76 @@
 
       <!-- Main Content -->
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <!-- Header -->
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
           <h1 class="h2">CVs</h1>
         </div>
+    
+        <!-- Main Content -->
         <div class="content">
-          <h4>Main Components</h4>
-          <!-- Add your main content here -->
+          <h4>Sample CVs</h4>
+          <div class="row mt-4">
+            <!-- CV Items -->
+            <div class="col-lg-4 col-md-6 mb-3">
+              <div class="card shadow-sm">
+                <img src="cv1.jpg" class="card-img-top" alt="Sample CV 1" />
+                <div class="card-body text-center">
+                  <h5 class="card-title">Sample CV 1</h5>
+                  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cvModal" onclick="showCV('Sample CV 1', 'cv1.jpg')">View</button>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-lg-4 col-md-6 mb-3">
+              <div class="card shadow-sm">
+                <img src="cv2.jpg" class="card-img-top" alt="Sample CV 2" />
+                <div class="card-body text-center">
+                  <h5 class="card-title">Sample CV 2</h5>
+                  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cvModal" onclick="showCV('Sample CV 2', 'cv2.jpg')">View</button>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-lg-4 col-md-6 mb-3">
+              <div class="card shadow-sm">
+                <img src="cv3.jpg" class="card-img-top" alt="Sample CV 3" />
+                <div class="card-body text-center">
+                  <h5 class="card-title">Sample CV 3</h5>
+                  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cvModal" onclick="showCV('Sample CV 3', 'cv3.jpg')">View</button>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Add more CV items as needed -->
+    
+          </div>
         </div>
       </main>
+    
+      <!-- Modal -->
+      <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="cvModalLabel">CV Title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img id="cvImage" src="" class="img-fluid" alt="CV Sample" />
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <script>
+        function showCV(title, imgSrc) {
+          document.getElementById('cvModalLabel').innerText = title;
+          document.getElementById('cvImage').src = imgSrc;
+        }
+      </script>
     </div>
   </div>
 
