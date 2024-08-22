@@ -1,4 +1,7 @@
+# Enable URL rewriting
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect requests to the corresponding HTML files
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.html [NC, L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/.]+)$ $1.html [L]
