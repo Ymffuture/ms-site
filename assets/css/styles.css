@@ -140,3 +140,31 @@
     height: auto;
     display: block;
   }
+
+  .gallery-item {
+    position: relative;
+  }
+  
+  .lock-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6); /* Dark background for better visibility */
+    color: rgb(247, 12, 12);
+    border-radius: 50%;
+    padding: 50px;
+    font-size: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+  font-weight: 800;
+    z-index: 10; /* Ensure it is on top of other elements */
+  }
+  
+  .lock-icon i {
+    margin: 0;
+  }
+  
