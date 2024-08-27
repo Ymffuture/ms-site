@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function removeHtmlExtension(url) {
-    return url.replace(/\.html$/, `/future/ms`);
+    return url.replace(/\.html$/, ``);
 }
 
 const url = "https://example.com/page.html";
@@ -42,7 +42,7 @@ const cleanUrl = removeHtmlExtension(url);
 console.log(cleanUrl); 
 
 const characters = "abcdefghijklmnopqrstuvwxyz0123456789"; 
-const length = 50;  
+const length = 80;  
 let randomString = "";
 
 
@@ -57,5 +57,5 @@ console.log(newrandomString);
 
 const currentUrl = window.location.href;
 const newUrl = currentUrl.replace(/\.html$/, `/future/ms/${newrandomString}`);
-window.history.replaceState(null, '', newUrl);
+// window.history.replaceState(null, '', newUrl);
 
