@@ -148,12 +148,11 @@ function showToast() {
 
 //=============================================
 
-function removeHtmlExtension(url) {
-  return url.replace(/\.html$/, '');
-}
-
-function getCurrentPage() {
+document.addEventListener('DOMContentLoaded', () => {
+  // Check if the URL ends with .html and remove it
   const currentUrl = window.location.href;
-  const currentPage = removeHtmlExtension(currentUrl);
-  return currentPage;
-}
+  if (currentUrl.endsWith('.html')) {
+      const newUrl = currentUrl.slice(0, -5); // Remove '.html'
+      window.history.replaceState(null, '', newUrl);
+  }
+});
