@@ -149,10 +149,18 @@ function showToast() {
 //=============================================
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Check if the URL ends with .html and remove it
+  // Get the current URL
   const currentUrl = window.location.href;
+
+  // Check if the URL ends with .html
   if (currentUrl.endsWith('.html')) {
-      const newUrl = currentUrl.slice(0, -5); // Remove '.html'
+      // Extract the page name by removing the directory path and .html extension
+      const pageName = currentUrl.substring(currentUrl.lastIndexOf('/') + 1, currentUrl.lastIndexOf('.html'));
+      
+      // Construct the new URL path with /future/ms/ and the page name
+      const newUrl = currentUrl.replace(/\/[^\/]+\.html$/, `/future/ms/${pageName}`);
+
+      // Update the URL in the browser's address bar without reloading the page
       window.history.replaceState(null, '', newUrl);
   }
 });
