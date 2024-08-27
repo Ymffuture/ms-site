@@ -148,3 +148,12 @@ function showToast() {
 
 //=============================================
 
+function removeHtmlExtension(url) {
+  return url.replace(/\.html$/, '');
+}
+
+function getCurrentPage() {
+  const currentUrl = window.location.href;
+  const currentPage = removeHtmlExtension(currentUrl);
+  return currentPage;
+}
