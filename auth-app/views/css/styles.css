@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F0F7FF;
+
+}
+
+form{
+
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: 560px;
+    border-radius: 20px;
+    border: 1px solid rgba(128, 128, 128, 0.493);
+    padding: 65px;
+}
+.mIcons{
+
+    display: grid;
+    flex-direction: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:20px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+
+}
+
+.link , input , button{
+
+    color: #222222a9;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 14px;
+    padding: 8px 40px;
+    border: 1px solid royalblue;
+    font-family: sans-serif;
+    
+}
+.link{
+    background: transparent;
+ display: flex;
+ gap: 10px;
+ font-size: 14px;
+    
+    
+}
+.link:hover{
+    background: rgba(76, 121, 255, 0.596);
+    transition: .3s ease-in-out;
+}
+
+.text-top{
+
+    margin-bottom: 35px;
+}
+
+.lines{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px;
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+@media (max-width: 492px) {
+   .lines{
+    grid-template-columns: repeat(1,1fr);
+    margin-bottom: 5px;
+   
+   }
+ 
+   .mIcons{
+    grid-template-columns: repeat(1,1fr);
+    width: 100%;
+    gap: 4px;
+    margin-bottom: 10px;
+   }
+   .link{
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   }
+  
+form{
+
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    height: 650px;
+    border-radius: 20px;
+    border: 1px solid rgba(128, 128, 128, 0.493);
+    padding: 50px;
+}
+body{
+    zoom: 90%;
+}
+
+.signup{
+    font-size: 15px;
+}
+}
+.line{
+height: .1px;
+    display: flex;
+}
+.middle-text{
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .05px;
+
+}
+input{
+    padding: 10px;
+    width: 95%;
+    margin-bottom: 8px;
+    outline: none;
+    background: transparent;
+}
+input:focus{
+    border: 5px double royalblue;
+}
+
+button{
+    background: pink;
+    border: none;
+    width: 100%;
+    margin-top: 36px;
+    cursor: pointer;
+}
+.text-top , h2 ,h5{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+   
+    
+}
+h2{
+    margin-bottom: 10px;
+}
+h5{
+    color: rgba(250, 0, 0, 0.548);
+}
+.text-top {
+margin-bottom: 35px;
+font-size: 12px;
+}
+
+img{
+    width: 20px;
+     display: flex;
+  
+    
+}
+
+.err{
+   color: rgba(253, 30, 30, 0.774);
+   font-weight: 600;
+ font-size: 10px;
+ text-align: center;
+ transition: .6s ease-in-out;
+
+}
+
+
+::placeholder{
+    font-size: 10px;
+}
+
+.icons{
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+   
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.signup{
+    margin-top: 10px;
+    text-align: center;
+}
