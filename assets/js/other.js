@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function removeHtmlExtension(url) {
-    return url.replace(/\.html$/, ``);
+    return url.replace(/\.html$/, `.php`);
+
 }
 
 const url = "https://example.com/page.html";
@@ -56,6 +57,6 @@ console.log(newrandomString);
 
 
 const currentUrl = window.location.href;
-const newUrl = currentUrl.replace(/\.html$/, `/future/ms/${newrandomString}`);
-// window.history.replaceState(null, '', newUrl);
+const newUrl = currentUrl.replace(/\.html$/, `.php`);
+window.history.replaceState(null, '', newUrl);
 
